@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-sleep
+  labels:
+    name: busybox-sleep
+spec:
+  containers:
+  - name: busybox-sleep
+    image: busybox
+    args:
+      - "sleep"
+      - "infinity"
+    resources:
+      limits:
+        hardware-vendor.example/suger: 2
+
+
+
